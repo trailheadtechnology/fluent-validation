@@ -1,0 +1,116 @@
+﻿@page
+@model Fluent_Validation.Pages.Product.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<h1>Edit</h1>
+
+<h4>SalesLT_Product</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <input type="hidden" asp-for="SalesLT_Product.ProductId" />
+            <div class="form-group">
+                <label asp-for="SalesLT_Product.Name" class="control-label"></label>
+                <input asp-for="SalesLT_Product.Name" class="form-control" />
+                <span asp-validation-for="SalesLT_Product.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SalesLT_Product.ProductNumber" class="control-label"></label>
+                <input asp-for="SalesLT_Product.ProductNumber" class="form-control" />
+                <span asp-validation-for="SalesLT_Product.ProductNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SalesLT_Product.Color" class="control-label"></label>
+                <input asp-for="SalesLT_Product.Color" class="form-control" />
+                <span asp-validation-for="SalesLT_Product.Color" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SalesLT_Product.StandardCost" class="control-label"></label>
+                <input asp-for="SalesLT_Product.StandardCost" class="form-control" />
+                <span asp-validation-for="SalesLT_Product.StandardCost" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SalesLT_Product.ListPrice" class="control-label"></label>
+                <input asp-for="SalesLT_Product.ListPrice" class="form-control" />
+                <span asp-validation-for="SalesLT_Product.ListPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SalesLT_Product.Size" class="control-label"></label>
+                <input asp-for="SalesLT_Product.Size" class="form-control" />
+                <span asp-validation-for="SalesLT_Product.Size" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SalesLT_Product.Weight" class="control-label"></label>
+                <input asp-for="SalesLT_Product.Weight" class="form-control" />
+                <span asp-validation-for="SalesLT_Product.Weight" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SalesLT_Product.ProductCategoryId" class="control-label"></label>
+                <select asp-for="SalesLT_Product.ProductCategoryId" class="form-control" asp-items="ViewBag.ProductCategoryId"></select>
+                <span asp-validation-for="SalesLT_Product.ProductCategoryId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SalesLT_Product.ProductModelId" class="control-label"></label>
+                <select asp-for="SalesLT_Product.ProductModelId" class="form-control" asp-items="ViewBag.ProductModelId"></select>
+                <span asp-validation-for="SalesLT_Product.ProductModelId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SalesLT_Product.SellStartDate" class="control-label"></label>
+                <input asp-for="SalesLT_Product.SellStartDate" class="form-control" />
+                <span asp-validation-for="SalesLT_Product.SellStartDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SalesLT_Product.SellEndDate" class="control-label"></label>
+                <input asp-for="SalesLT_Product.SellEndDate" class="form-control" />
+                <span asp-validation-for="SalesLT_Product.SellEndDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SalesLT_Product.DiscontinuedDate" class="control-label"></label>
+                <input asp-for="SalesLT_Product.DiscontinuedDate" class="form-control" />
+                <span asp-validation-for="SalesLT_Product.DiscontinuedDate" class="text-danger"></span>
+            </div>
+            @*<div class="form-group">
+                <label asp-for="SalesLT_Product.ThumbNailPhoto" class="control-label"></label>
+                <input asp-for="SalesLT_Product.ThumbNailPhoto" class="form-control" />
+                <span asp-validation-for="SalesLT_Product.ThumbNailPhoto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SalesLT_Product.ThumbnailPhotoFileName" class="control-label"></label>
+                <input asp-for="SalesLT_Product.ThumbnailPhotoFileName" class="form-control" />
+                <span asp-validation-for="SalesLT_Product.ThumbnailPhotoFileName" class="text-danger"></span>
+            </div>*@
+            <div class="form-group">
+                <label asp-for="SalesLT_Product.Rowguid" class="control-label"></label>
+                <input asp-for="SalesLT_Product.Rowguid" class="form-control" />
+                <span asp-validation-for="SalesLT_Product.Rowguid" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SalesLT_Product.ModifiedDate" class="control-label"></label>
+                <input asp-for="SalesLT_Product.ModifiedDate" class="form-control" />
+                <span asp-validation-for="SalesLT_Product.ModifiedDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SalesLT_Product.QtyOnHand" class="control-label"></label>
+                <input asp-for="SalesLT_Product.QtyOnHand" class="form-control" />
+                <span asp-validation-for="SalesLT_Product.QtyOnHand" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
