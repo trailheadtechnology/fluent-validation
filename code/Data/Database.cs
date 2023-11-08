@@ -130,7 +130,7 @@ namespace Fluent_Validation.Data
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=AdventureWorks;Integrated Security=True;MultipleActiveResultSets=True");
+                optionsBuilder.UseSqlServer(@"Server=tcp:th-temp-db.database.windows.net,1433;Initial Catalog=AdventureWorks;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;User Id=tempdb-sa;Password=QngcLbu7YEnvvvjzFPi^R8Jk@W&#@b&9;");
             }
         }
 
@@ -1208,7 +1208,7 @@ namespace Fluent_Validation.Data
         /// <summary>
         /// Product weight.
         /// </summary>
-        //[Range(0, double.MaxValue)]
+        //[Range(0, double.MaxValue, ErrorMessage = "Weight cannot be negative")]
         public decimal? Weight { get; set; } // Weight
 
         /// <summary>

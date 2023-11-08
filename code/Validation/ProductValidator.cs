@@ -7,13 +7,15 @@ namespace Fluent_Validation.Validation
     {
         public ProductValidator()
         {
-            RuleFor(x => x.Weight)
-                .GreaterThan(0)
-                .WithMessage("Weight must be positive");
-
+            //not supported for client-side
             //RuleFor(x => x.Weight)
-            //    .InclusiveBetween(0, decimal.MaxValue)
+            //    .GreaterThan(0)
             //    .WithMessage("Weight must be positive");
+
+            //supported by client-side
+            RuleFor(x => x.Weight)
+                .InclusiveBetween(0, decimal.MaxValue)
+                .WithMessage("Weight must be positive");
         }
     }
 }

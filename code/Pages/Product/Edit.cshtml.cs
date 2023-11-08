@@ -32,14 +32,14 @@ namespace Fluent_Validation.Pages.Product
                 return NotFound();
             }
 
-            var saleslt_product =  await _context.SalesLT_Products.FirstOrDefaultAsync(m => m.ProductId == id);
+            var saleslt_product = await _context.SalesLT_Products.FirstOrDefaultAsync(m => m.ProductId == id);
             if (saleslt_product == null)
             {
                 return NotFound();
             }
             SalesLT_Product = saleslt_product;
-           ViewData["ProductCategoryId"] = new SelectList(_context.SalesLT_ProductCategories, "ProductCategoryId", "Name");
-           ViewData["ProductModelId"] = new SelectList(_context.SalesLT_ProductModels, "ProductModelId", "Name");
+            ViewData["ProductCategoryId"] = new SelectList(_context.SalesLT_ProductCategories, "ProductCategoryId", "Name");
+            ViewData["ProductModelId"] = new SelectList(_context.SalesLT_ProductModels, "ProductModelId", "Name");
             return Page();
         }
 
@@ -78,7 +78,7 @@ namespace Fluent_Validation.Pages.Product
 
         private bool SalesLT_ProductExists(int id)
         {
-          return (_context.SalesLT_Products?.Any(e => e.ProductId == id)).GetValueOrDefault();
+            return (_context.SalesLT_Products?.Any(e => e.ProductId == id)).GetValueOrDefault();
         }
     }
 }
