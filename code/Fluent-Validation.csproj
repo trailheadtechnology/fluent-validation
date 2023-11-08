@@ -1,10 +1,11 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>Fluent_Validation</RootNamespace>
+    <UserSecretsId>9297e72d-e874-4cd9-997f-85f9f300d9aa</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
